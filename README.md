@@ -1,2 +1,2 @@
 # devopsPractice
-# This the updated readme file
+# This is the updated readme file
