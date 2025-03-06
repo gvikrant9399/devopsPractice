@@ -1,14 +1,11 @@
 from django.urls import path
-from django.contrib import admin
-from django.urls import path, include
 from . import views
 
 app_name = 'movies'
+
 urlpatterns = [
+    # /movies/
     path('', views.index, name='index'),
-    path('movies/', include('movies.urls')),
-    path('admin/', admin.site.urls),
-    path('<int:movie_id>/', views.show, name='show')
-
+    # /movies/id e.g. /movies/1
+    path('<int:movie_id>/', views.show, name='show'),
 ]
-
